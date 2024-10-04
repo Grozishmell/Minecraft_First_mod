@@ -1,6 +1,7 @@
 package net.grozishmell.firstmod;
 
 import com.mojang.logging.LogUtils;
+import net.grozishmell.firstmod.block.ModBlocks;
 import net.grozishmell.firstmod.item.ModCreativeModTabs;
 import net.grozishmell.firstmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,7 +34,8 @@ public class FirstMod
 
         ModCreativeModTabs.register(modEventBus);
 
-        ModItems.register((modEventBus));
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
